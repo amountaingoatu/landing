@@ -1,54 +1,53 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon';
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: 'Software Development',
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      'Web apps & sites, mobile apps, ecommerce. Experience building complex solutions from the ground up.',
+    icon: 'bx:bxs-window-alt',
   },
   {
-    title: "100% Static HTML, No JS",
+    title: 'IT',
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      'Productivity, networking, infrastructure and emails technologies.',
+    icon: 'bx:bxs-briefcase',
   },
   {
-    title: "On-Demand Components",
+    title: 'Admin',
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      'Appointments & customer handling, personal assistance & project management.',
+    icon: 'bx:bxs-briefcase',
   },
   {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+    title: 'Tech',
+    description: 'Backend systems, pipelines, data & security.',
+    icon: 'bx:bxs-data',
   },
   {
-    title: "SEO Enabled",
+    title: 'Organisation',
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      'Paperwork processing, orders & invoice handling, accountancy suite assistance.',
+    icon: 'bx:bxs-file-find',
   },
   {
-    title: "Community",
+    title: 'Branding, Graphic Design & Social Media',
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      'Management of social media accounts, branding, logos, graphics, UI/UX design and all things visual.',
+    icon: 'bx:bxs-paint',
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Everything you need to move tech in your business forward.
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class="text-lg mt-4 text-mandys-pink-400">
+    Fred can sit down with you and your team without friction to find the best
+    ways to make improvements.
   </p>
 </div>
 
@@ -60,8 +59,10 @@ const features = [
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{' '}
+          <p class="text-mandys-pink-400 mt-2 leading-relaxed">
+            {item.description}
+          </p>
         </div>
       </div>
     ))
