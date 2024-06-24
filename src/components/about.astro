@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { Picture } from 'astro:assets';
+import workingTogether from '@assets/working-together.jpg';
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/container.astro';
 import Sectionhead from '@components/sectionhead.astro';
@@ -11,14 +12,23 @@ const publishedTeamMembers = await getCollection('team', ({ data }) => {
 });
 ---
 
+<div id="about"></div>
 <Container>
   <Sectionhead>
     <Fragment slot="title">Who</Fragment>
     <Fragment slot="desc">We are a small passionate team.</Fragment>
   </Sectionhead>
 
-  <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-    <h2 class="font-bold text-3xl text-mandys-pink-400">I'm Fred.</h2>
+  <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-4">
+    <div class="w-full">
+      <Picture
+        src={workingTogether}
+        alt="Astronaut in the air"
+        sizes="(max-width: 800px) 100vw, 400px"
+        class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+      />
+    </div>
+    <h2 class="font-bold text-3xl text-mandys-pink-400 mt-4">I'm Fred.</h2>
     <p class="text-lg leading-relaxed text-mandys-pink-400">
       I've worked supporting teams across businesses, small to multi-national. I
       run complex technical projects from discovery and design, to development
@@ -26,32 +36,5 @@ const publishedTeamMembers = await getCollection('team', ({ data }) => {
       team extends this to cover almost any tech problem you might think of in a
       business.
     </p>
-  </div>
-  <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-    {
-      publishedTeamMembers.map((teamMemberEntry) => (
-        <div class="group">
-          <div class="w-full aspect-square">
-            <Picture
-              src={teamMemberEntry.data.avatar.src}
-              alt={teamMemberEntry.data.avatar.alt}
-              sizes="(max-width: 800px) 100vw, 400px"
-              width={400}
-              height={400}
-              class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-            />
-          </div>
-
-          <div class="mt-4 text-center">
-            <h2 class="text-lg text-mandys-pink-400">
-              {teamMemberEntry.data.name}
-            </h2>
-            <h3 class="text-sm text-mandys-pink-400">
-              {teamMemberEntry.data.title}
-            </h3>
-          </div>
-        </div>
-      ))
-    }
   </div>
 </Container>

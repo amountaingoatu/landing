@@ -13,7 +13,7 @@ const features = [
     title: 'IT',
     description:
       'Productivity, networking, infrastructure and emails technologies.',
-    icon: 'bx:bxs-briefcase',
+    icon: 'bx:bxs-envelope-open',
   },
   {
     title: 'Admin',
@@ -41,7 +41,7 @@ const features = [
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div id="services" class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Everything you need to move tech in your business forward.
   </h2>
@@ -55,8 +55,8 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+        <div class="mt-1 bg-white rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-deep-teal-950" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{' '}

@@ -1,6 +1,6 @@
 ---
 import { Picture } from 'astro:assets';
-import heroImage from 'assets/hero.png';
+import heroImage from 'assets/hero-selected.png';
 import Link from '@components/ui/link.astro';
 import { Icon } from 'astro-icon/components';
 ---
@@ -28,10 +28,10 @@ import { Icon } from 'astro-icon/components';
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="/"
-        class="flex gap-1 items-center justify-center"
+        href="/contact"
+        class="flex gap-1 items-center justify-center bg-amaranthbrand"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        <!-- <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" /> -->
 
         Contact
       </Link>
