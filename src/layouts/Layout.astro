@@ -12,15 +12,15 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  '/opengraph.jpg',
+  '/opengraph.png',
   Astro.site
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + ' | ' + 'Astroship'
-  : 'Astroship - Starter Template for Astro with Tailwind CSS';
+  ? title + ' | ' + "Fred's"
+  : "Fred's Help - A Friendly IT Guy";
 ---
 
 <!doctype html>
@@ -34,7 +34,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Fred's Help - A Friendly IT Guy"
       canonical={canonicalURL}
       twitter={{
         creator: '@surjithctly',
@@ -45,11 +45,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: 'website',
-          title: `Astroship - Starter Template for Astro`,
+          title: `Fred's Help - A Friendly IT Guy"`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: 'Astroship Homepage Screenshot',
+          alt: "Fred's Help Homepage Screenshot",
         },
       }}
     />

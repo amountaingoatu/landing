@@ -1,0 +1,10 @@
+# local
+npm run build && \
+tar -czvf fredsit-landing.tar.gz ./dist && \
+scp fredsit-landing.tar.gz amglo:~/deploy/
+
+# remote
+tar -xzvf fredsit-landing.tar.gz && cd dist && \
+sudo rm -rf /var/www/html/fredsit/freds.help/* && \
+sudo mv ./* /var/www/html/fredsit/freds.help/ && \
+sudo chown www-data:www-data /var/www/html/fredsit/freds.help -R
